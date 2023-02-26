@@ -1,5 +1,5 @@
 // **** MUST use JQUERY and MOMENT.JS **** \\
-let plannerEntries = ["","","","","","","","",""];
+let plannerEntries = [];
 
 function displayFromLocalStorage() {    // get from LS, if not empty write contents to textarea(s) using array index and textarea index
     plannerEntries = JSON.parse(localStorage.getItem("plannerEntries")) || [];
