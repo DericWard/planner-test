@@ -5,8 +5,6 @@ let plannerEntries = ['','','','','','','','',''];
 plannerEntries.length = 9;
 
 function displayTest(plannerEntries) {
-    // let plannerTestEntries = localStorage.getItem("plannerEntries");
-    // let testArray = JSON.parse(plannerTestEntries);
     for(let i = 0; i < 9; i++) {
         console.log("[i]: " + plannerEntries[i]);
         let textAreaDisplay = $(`plannerEntries.${i}`);
@@ -20,19 +18,18 @@ function savePlannerEntry(btnID, textEntry) {
     displayTest(plannerEntries);
 };
 
-function displayFromLocalStorage() {
-    plannerEntries.forEach(function(plannerText) {
-        //
-    });
-};
+// function displayFromLocalStorage() {
+//     plannerEntries.forEach(function(plannerText) {
+//         //
+//     });
+// };
 
 function getLocalStorage() {
     plannerEntries = JSON.parse(localStorage.getItem("plannerEntries")) || [];
-    console.log("from getlocal storage: " + plannerEntries);
+    // console.log("from getlocal storage: " + plannerEntries);
     if(plannerEntries.length > 0) {
-        displayFromLocalStorage(); 
+        // displayFromLocalStorage(); 
         };
-    // return;
 };
 
 function generateTimeBlocks() { 
