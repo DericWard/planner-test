@@ -1,12 +1,12 @@
 // **** MUST use JQUERY and MOMENT.JS **** \\
-let plannerEntries = [];
+let plannerEntries = ["", "", "", "", "", "", "", "", "", "", "", ""]; // vain attempt at solving null/undefined intial display!
 
 function displayFromLocalStorage() {    // get from LS, if not empty write contents to textarea(s) using array index and textarea index
     plannerEntries = JSON.parse(localStorage.getItem("plannerEntries")) || [];
     if(plannerEntries.length > 0) {
-    for(let i = 0; i < 9; i++) {
-        let textAreaDisplay = $('textarea').eq(i);
-        textAreaDisplay.val(`${plannerEntries[i]}`);
+        for(let i = 0; i < 9; i++) {
+            let textAreaDisplay = $('textarea').eq(i);
+            textAreaDisplay.val(`${plannerEntries[i]}`);
         };
     };
 };
